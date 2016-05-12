@@ -4,8 +4,9 @@
   "description": "Middle Endian Demo for learning node.js.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "migrate:latest": "knex migrate:latest",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
   },
   "author": "",
   "license": "MIT",
