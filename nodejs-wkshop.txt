@@ -78,3 +78,10 @@ See all add-ons with heroku addons
 See all apps with heroku apps --all
 
 See other CLI commands with heroku help
+
+- $ heroku create
+- $ heroku addons:create heroku-postgresql:hobby-dev  <-- create production db
+- $ heroku pg   <-- gives all info about my db
+- $ git remote -v   <-- shows that heroku set up a remote for me
+- $ git push heroku master
+- $ heroku log
