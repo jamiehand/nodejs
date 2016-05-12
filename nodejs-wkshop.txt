@@ -1,0 +1,80 @@
+John, Aumit
+
+node.js wkshop
+Dana Silver, Middle Endian
+
+- We're going to make a fully functioning web server using Node! :)
+- Client - Chrome, Firefox, etc. - no need to write one.
+- Server - What we need to write. - responds to HTTP requests.
+- Node comes with package manager -> install dependencies; external code that
+  we'll use in new projects to build on someone else's code.
+    - npm - node package manager
+$ npm init
+- Entry point: for where it starts
+$ npm install express --save
+    - "save" automatically puts it into the package.json
+    - express helps set up a web server quickly
+- templating: using a template
+    - use 'pug' formerly known as jade
+- npm install -g nodemon  // monitors for changes in code
+
+- Every page I render is a 'view'
+- TODO add postgres.app to my path for psql
+
+- postgres: can't make a table called user
+- postgres is a db engine: uses something more efficient than HTTP to
+  manage something more
+- db's are the essence of dynamic websites
+- open postgres: CREATE DATABASE middleendian_demo;
+
+- back in terminal: $ knex init
+- knex helps us connect to our db
+- $ knex migrate:make initial
+    - by default knex uses the development environment
+    - We can manually create the schema for our DB, but it can get complicated
+      quickly.
+    - schema describes fields of my table
+    - e.g. table "Course"
+        - columns: id, name, code
+    - schema is created through sql commands
+        - e.g. CREATE TABLE 'course' (
+            int 'id'
+            char(200) 'name'
+            char(200) 'code'
+        )
+    - nice to codify these using migrations! :)
+    - knex.schema.createTable('course', function(table){
+        ...
+    })
+
+- docs for knex --> knexjs.org
+- knex migrate:latest
+- finding the name of my db: open psgl:
+    - \l   <-- lists all dbs in my instance of postgresql
+    - \c middleendian_demo  <-- connect to middleendian_demo db
+    - \dt  <-- list all tables in this db
+
+- save name of environment in env
+- see callbackhell for what it looks like w/o promises
+
+- npm install --save body-parser
+
+- NOTE: if I change the view I don't need to restart my server b/c it's just
+  taking the view and serving it.
+- cmd shift p -> markdown preview toggle
+
+- ```sh    // bash, github flavored markdown
+  ```
+
+- $ heroku
+Enter your Heroku credentials.
+Email: hand.jamie@gmail.com
+Password (typing will be hidden):
+Logged in as hand.jamie@gmail.com
+ ▸    Add apps to this dashboard by favoriting them with heroku
+ ▸    apps:favorites:add
+
+See all add-ons with heroku addons
+See all apps with heroku apps --all
+
+See other CLI commands with heroku help
