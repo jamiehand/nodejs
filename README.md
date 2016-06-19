@@ -1,3 +1,6 @@
+From MiddleEndian workshop with Dana Silver, Spring 2016.
+
+
 ### Install
 
 ```sh
@@ -24,5 +27,5 @@ $ knex migrate:latest
 ### Develop
 
 ```sh
-$ 
+$
 ```
